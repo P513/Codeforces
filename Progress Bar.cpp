@@ -6,14 +6,9 @@ int main() {
 	int n, k, t;
 	cin >> n >> k >> t;
 	int p = n * k * t / 100;
-	int i = 0;
-	while (p > 0) {
-		arr[i] = p - k < 0 ? p : k;
-		i++;
-		p -= k;
-	}
 	for (int i = 0; i < n; i++) {
-		cout << arr[i] << " ";
+		cout << (p > k ? k : p) << " ";
+		p = (p - k > 0) ? p - k : 0;
 	}
 	return 0;
 }
