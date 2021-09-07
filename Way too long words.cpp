@@ -1,18 +1,14 @@
 #include <iostream>
-#include <string.h>
+#include <string>
 using namespace std;
 int main() {
 	int n;
-	scanf("%d", &n);
+	string s;
+	cin >> n;
 	while (n--) {
-		char word[1010] = "";
-		scanf("%s", word);
-		if (strlen(word) > 10) {
-			printf("%c%d%c\n", word[0], strlen(word) - 2, word[strlen(word) - 1]);
-		}
-		else {
-			printf("%s\n", word);
-		}
+		cin >> s;
+		if (s.size() <= 10)cout << s << endl;
+		else cout << s[0] << s.size() - 2 << s[s.size() - 1] << endl;
 	}
 	return 0;
 }
